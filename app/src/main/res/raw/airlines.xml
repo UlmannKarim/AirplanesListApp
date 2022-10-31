@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="airlines.xml" generated="2011-11-05T23:09:59">
+
+    <airline>
+        <name>Qatar Airways</name>
+        <originCountry>Qatar</originCountry>
+        <logo>qatar_icon</logo>
+        <homeBaseAirport>Hamad International Airport</homeBaseAirport>
+        <url>https://www.qatarairways.com/en-ie/homepage.html</url>
+        <callSign>QATARI</callSign>
+        <ranking>1</ranking>
+    </airline>
+
+    <airline>
+        <name>Singapore Airlines</name>
+        <originCountry>Singapore</originCountry>
+        <logo>singapore_airlines</logo>
+        <homeBaseAirport>Changi Airport</homeBaseAirport>
+        <url>https://www.singaporeair.com/en_UK/ie/home#/</url>
+        <callSign>SINGAPORE</callSign>
+        <ranking>2</ranking>
+    </airline>
+
+    <airline>
+        <name>Emirates</name>
+        <originCountry>United Arab Emirates</originCountry>
+        <logo>emirates_logo</logo>
+        <homeBaseAirport>Dubai International Airport</homeBaseAirport>
+        <url>https://www.emirates.com/ie/english/</url>
+        <callSign>Emirates</callSign>
+        <ranking>3</ranking>
+    </airline>
+
+    <airline>
+        <name>All Nippon Airways</name>
+        <originCountry>Japan</originCountry>
+        <logo>all_nippon_airways</logo>
+        <homeBaseAirport>Tokyo–Haneda</homeBaseAirport>
+        <url>https://www.ana.co.jp/</url>
+        <callSign>ALL NIPPON/</callSign>
+        <ranking>4</ranking>
+    </airline>
+
+    <airline>
+        <name>Qantas Airways</name>
+        <originCountry>Australia</originCountry>
+        <logo>qantas</logo>
+        <homeBaseAirport>Sydney Airport</homeBaseAirport>
+        <url>https://www.qantas.com/ie/en.html</url>
+        <callSign>QANTAS</callSign>
+        <ranking>5</ranking>
+    </airline>
+
+    <airline>
+        <name>Japan Airlines</name>
+        <originCountry>Japan</originCountry>
+        <logo>japan_airlines</logo>
+        <homeBaseAirport>Tokyo–Narita</homeBaseAirport>
+        <url>https://www.jal.co.jp/jp/en/</url>
+        <callSign>JAPAN AIR</callSign>
+        <ranking>6</ranking>
+    </airline>
+
+    <airline>
+        <name>Turkish Airlines</name>
+        <originCountry>Turkey</originCountry>
+        <logo>turkish_icon</logo>
+        <homeBaseAirport>Istanbul Airport</homeBaseAirport>
+        <url>https://www.turkishairlines.com/</url>
+        <callSign>TURKISH</callSign>
+        <ranking>7</ranking>
+    </airline>
+
+    <airline>
+        <name>Air France</name>
+        <originCountry>France</originCountry>
+        <logo>air_france</logo>
+        <homeBaseAirport>Paris–Charles de Gaulle</homeBaseAirport>
+        <url>https://wwws.airfrance.fr/splash</url>
+        <callSign>AIRFRANS</callSign>
+        <ranking>8</ranking>
+    </airline>
+
+    <airline>
+        <name>Korean Air</name>
+        <originCountry>Korea</originCountry>
+        <logo>korean_air</logo>
+        <homeBaseAirport>Incheon International Airport</homeBaseAirport>
+        <url>https://www.koreanair.com/ot/en</url>
+        <callSign>KOREAN AIR</callSign>
+        <ranking>9</ranking>
+    </airline>
+
+    <airline>
+        <name>Swiss Airlines</name>
+        <originCountry>Switzerland</originCountry>
+        <logo>swiss_airlines</logo>
+        <homeBaseAirport>Zurich Airport</homeBaseAirport>
+        <url>https://www.swiss.com/ie/en/homepage</url>
+        <callSign>SWISS</callSign>
+        <ranking>10</ranking>
+    </airline>
+</dataroot>
