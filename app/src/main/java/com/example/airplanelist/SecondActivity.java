@@ -16,8 +16,9 @@ public class SecondActivity extends AppCompatActivity{
     private Button buttonNext;
 
     // create and add the objects
-    ImageView imageView2;
+    ImageView airlineLogo;
     TextView textView2;
+    String description = "";
 
 
     @SuppressLint("MissingInflatedId")
@@ -27,25 +28,28 @@ public class SecondActivity extends AppCompatActivity{
         setContentView(R.layout.second_activity);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Bundle b = getIntent().getExtras();
-        Airline t = (Airline) b.getSerializable("airline_name");
+        Airline airline = (Airline) b.getSerializable("airline_name");
 
         buttonNext =findViewById(R.id.buttonInfo);
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(SecondActivity.this, Activity3.class);
-                intent.putExtra("team_name", t);
+                Intent intent=new Intent(SecondActivity.this, ThirdActivity.class);
+                intent.putExtra("airline_name", airline); // this needs to be fixed!
                 startActivity(intent);
             }
         });
 
-        imageView2 = findViewById(R.id.imageView2);
+        airlineLogo = findViewById(R.id.airlineLogo);
         textView2 = findViewById(R.id.textView2);
 
-        textView2.setText(t.getName());
-        Integer id = SecondActivity.this.getResources().getIdentifier(t.getLogo(), "drawable", SecondActivity.this.getPackageName());
-        imageView2.setImageResource(id);
+        description += airline.getName() + "\n";
+        description += airline.getRanking();
+        description += airline.getOriginCountry();
+
+        textView2.setText(description);
+        Integer id = SecondActivity.this.getResources().getIdentifier(airline.getLogo(), "drawable", SecondActivity.this.getPackageName());
+        airlineLogo.setImageResource(id);
 
     }
 }
-//this is a test

@@ -1,6 +1,3 @@
-
-//https://codeshare.io/dwgyVM
-
 package com.example.airplanelist;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,11 +6,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 
-
-//public class MainActivity extends AppCompatActivity implements InterfaceRecycleView {
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements InterfaceRecycleView {
+//public class MainActivity extends AppCompatActivity {
 
     public RecyclerView recyclerView = null;
     public DataAdapter adapter = null;
@@ -38,6 +35,22 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new DataAdapter(this, R.layout.row_layout, airlinesList);
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Airline airline = airlines.getAirline(position);
+        Bundle bundle = new Bundle();
+        // make an intent + place the bundle on it + start activity
+
+        Toast.makeText(this,
+                airline.getName(),
+                Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        super.onPointerCaptureChanged(hasCapture);
     }
 
 //    @Override

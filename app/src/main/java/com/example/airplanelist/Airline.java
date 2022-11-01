@@ -1,6 +1,8 @@
 package com.example.airplanelist;
 
-public class Airline {
+import java.io.Serializable;
+
+public class Airline  implements Serializable {
 
     public Airline(String name, String callSign, String logo, String originCountry, String homeBaseAirport, String url, String ranking) {
         this.name = name;

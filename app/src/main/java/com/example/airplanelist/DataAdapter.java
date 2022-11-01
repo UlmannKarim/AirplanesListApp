@@ -40,28 +40,23 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         // populate viewholder with model data
         holder.name.setText(airlines[position].getName());
-        //holder.rank.setText(airlines[position].getRanking());
+//        holder.rank.setText(airlines[position].getLogo());
 
-
-        /// check below!
         String airlineLogo = airlines[position].getLogo();
         Integer id = context.getResources().getIdentifier(airlineLogo, "drawable", context.getPackageName());
         holder.logo.setImageResource(id);
         Log.d("Test image", id.toString());
 
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                // switch to another activity
-//                Intent intent = new Intent(context, className.class);
-//                Airline airline = airlines[holder.getAdapterPosition()];
-//                //intent.putExtra("airline name", (CharSequence) airline);
-//                context.startActivity(intent);
-//
-//                // do somthing with names[position]
-////                Toast.makeText(context, ((TextView)view).getText().toString(), Toast.LENGTH_LONG).show();
-//            }
-//        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, SecondActivity.class);
+                Airline airline = airlines[holder.getAdapterPosition()];
+                intent.putExtra("airline_name", airline);
+                context.startActivity(intent);
+
+            }
+        });
 
 
         //holder.image.setImageResource(imageID);
