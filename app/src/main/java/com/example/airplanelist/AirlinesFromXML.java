@@ -45,7 +45,7 @@ public class AirlinesFromXML {
             //Slice xmlDoc to NodeList
         NodeList nameList = xmlDoc.getElementsByTagName("name");
         NodeList callSignList = xmlDoc.getElementsByTagName("callSign");
-        NodeList logoList = xmlDoc.getElementsByTagName("logo");
+        NodeList iconList = xmlDoc.getElementsByTagName("icon");
         NodeList originCountryList = xmlDoc.getElementsByTagName("originCountry");
         NodeList homeBaseAirportList = xmlDoc.getElementsByTagName("homeBaseAirport");
         NodeList urlList = xmlDoc.getElementsByTagName("url");
@@ -57,13 +57,13 @@ public class AirlinesFromXML {
         for(int i=0; i<airlines.length; i++){
             String name = nameList.item(i).getFirstChild().getNodeValue();
             String callSign = callSignList.item(i).getFirstChild().getNodeValue();
-            String logo = logoList.item(i).getFirstChild().getNodeValue();
+            String icon = iconList.item(i).getFirstChild().getNodeValue();
             String originCountry = originCountryList.item(i).getFirstChild().getNodeValue();
             String homeBaseAirport = homeBaseAirportList.item(i).getFirstChild().getNodeValue();
             String url = urlList.item(i).getFirstChild().getNodeValue();
             String ranking = rankingList.item(i).getFirstChild().getNodeValue();
 
-            airlines[i] = new Airline(name, callSign, logo, originCountry, homeBaseAirport, url, ranking);
+            airlines[i] = new Airline(name, callSign, icon, originCountry, homeBaseAirport, url, ranking);
         }
     }
 

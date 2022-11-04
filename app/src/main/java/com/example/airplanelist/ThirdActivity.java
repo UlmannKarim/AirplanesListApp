@@ -25,13 +25,13 @@ public class ThirdActivity extends AppCompatActivity {
         nextButton =findViewById(R.id.buttonLink);
 
         Bundle b = getIntent().getExtras();
-        Airline airline = (Airline) b.getSerializable("team_name");
+        Airline airline = (Airline) b.getSerializable("airline_name");
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(ThirdActivity.this, FourthActivity.class);
-                intent.putExtra("team_name", (CharSequence) airline);
+                intent.putExtra("airline_name", (CharSequence) airline);
                 startActivity(intent);
             }
         });

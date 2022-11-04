@@ -4,6 +4,7 @@
     <airline>
         <name>Qatar Airways</name>
         <originCountry>Qatar</originCountry>
+        <icon>qatar_icon</icon>
         <logo>qatar_icon</logo>
         <homeBaseAirport>Hamad International Airport</homeBaseAirport>
         <url>https://www.qatarairways.com/en-ie/homepage.html</url>
@@ -14,7 +15,7 @@
     <airline>
         <name>Singapore Airlines</name>
         <originCountry>Singapore</originCountry>
-        <logo>singapore_airlines</logo>
+        <icon>singapore</icon>
         <homeBaseAirport>Changi Airport</homeBaseAirport>
         <url>https://www.singaporeair.com/en_UK/ie/home#/</url>
         <callSign>SINGAPORE</callSign>
@@ -24,7 +25,7 @@
     <airline>
         <name>Emirates</name>
         <originCountry>United Arab Emirates</originCountry>
-        <logo>emirates_logo</logo>
+        <icon>emirates_logo</icon>
         <homeBaseAirport>Dubai International Airport</homeBaseAirport>
         <url>https://www.emirates.com/ie/english/</url>
         <callSign>Emirates</callSign>
@@ -34,7 +35,7 @@
     <airline>
         <name>All Nippon Airways</name>
         <originCountry>Japan</originCountry>
-        <logo>all_nippon_airways</logo>
+        <icon>all_nippon_airways</icon>
         <homeBaseAirport>Tokyo–Haneda</homeBaseAirport>
         <url>https://www.ana.co.jp/</url>
         <callSign>ALL NIPPON/</callSign>
@@ -44,7 +45,7 @@
     <airline>
         <name>Qantas Airways</name>
         <originCountry>Australia</originCountry>
-        <logo>qantas</logo>
+        <icon>qantas</icon>
         <homeBaseAirport>Sydney Airport</homeBaseAirport>
         <url>https://www.qantas.com/ie/en.html</url>
         <callSign>QANTAS</callSign>
@@ -54,7 +55,7 @@
     <airline>
         <name>Japan Airlines</name>
         <originCountry>Japan</originCountry>
-        <logo>japan_airlines</logo>
+        <icon>japan_airlines</icon>
         <homeBaseAirport>Tokyo–Narita</homeBaseAirport>
         <url>https://www.jal.co.jp/jp/en/</url>
         <callSign>JAPAN AIR</callSign>
@@ -64,7 +65,7 @@
     <airline>
         <name>Turkish Airlines</name>
         <originCountry>Turkey</originCountry>
-        <logo>turkish_icon</logo>
+        <icon>turkish_icon</icon>
         <homeBaseAirport>Istanbul Airport</homeBaseAirport>
         <url>https://www.turkishairlines.com/</url>
         <callSign>TURKISH</callSign>
@@ -74,7 +75,7 @@
     <airline>
         <name>Air France</name>
         <originCountry>France</originCountry>
-        <logo>air_france</logo>
+        <icon>air_france_icon</icon>
         <homeBaseAirport>Paris–Charles de Gaulle</homeBaseAirport>
         <url>https://wwws.airfrance.fr/splash</url>
         <callSign>AIRFRANS</callSign>
@@ -84,7 +85,7 @@
     <airline>
         <name>Korean Air</name>
         <originCountry>Korea</originCountry>
-        <logo>korean_air</logo>
+        <icon>korean_air_icon</icon>
         <homeBaseAirport>Incheon International Airport</homeBaseAirport>
         <url>https://www.koreanair.com/ot/en</url>
         <callSign>KOREAN AIR</callSign>
@@ -94,7 +95,7 @@
     <airline>
         <name>Swiss Airlines</name>
         <originCountry>Switzerland</originCountry>
-        <logo>swiss_airlines</logo>
+        <icon>swiss_icon</icon>
         <homeBaseAirport>Zurich Airport</homeBaseAirport>
         <url>https://www.swiss.com/ie/en/homepage</url>
         <callSign>SWISS</callSign>

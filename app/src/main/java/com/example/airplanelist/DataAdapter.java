@@ -42,9 +42,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
         holder.name.setText(airlines[position].getName());
 //        holder.rank.setText(airlines[position].getLogo());
 
-        String airlineLogo = airlines[position].getLogo();
-        Integer id = context.getResources().getIdentifier(airlineLogo, "drawable", context.getPackageName());
-        holder.logo.setImageResource(id);
+//        String airlineIcon = airlines[position].getIcon();
+        Integer id = context.getResources().getIdentifier(airlines[position].getIcon(), "drawable", context.getPackageName());
+        holder.icon.setImageResource(id);
         Log.d("Test image", id.toString());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -72,14 +72,14 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public TextView name;
-        public ImageView logo;
+        public ImageView icon;
         public TextView rank;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             this.name = itemView.findViewById(R.id.textView);
-            this.logo = itemView.findViewById(R.id.imageView);
+            this.icon = itemView.findViewById(R.id.imageView);
             //this.rank = itemView.findViewById(R.id.textViewSubtitle);
 
 

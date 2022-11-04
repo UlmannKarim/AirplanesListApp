@@ -1,0 +1,4 @@
+2022 Airline Ranking: %RANKING%
+Call sign: %CALLSIGN%
+Country of origin: %ORIGIN%
+Home Airport: %HOME%

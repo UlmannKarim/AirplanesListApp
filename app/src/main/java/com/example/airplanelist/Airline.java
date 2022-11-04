@@ -4,20 +4,35 @@ import java.io.Serializable;
 
 public class Airline  implements Serializable {
 
-    public Airline(String name, String callSign, String logo, String originCountry, String homeBaseAirport, String url, String ranking) {
+    public Airline(String name, String callSign,
+                   String icon, String originCountry, String homeBaseAirport, String url, String ranking) {
         this.name = name;
         this.callSign = callSign;
-        this.logo = logo;
+        this.icon = icon;
         this.originCountry = originCountry;
         this.homeBaseAirport = homeBaseAirport;
         this.url = url;
         this.ranking = ranking;
     }
 
-    private String name, originCountry, homeBaseAirport, logo, url, callSign, ranking;
+
+    // have icon and logo attributes
+    // dispaly icon only
+    // when clicking on to the airline
+    // dispaly details and its full logo
+
+    private String name, originCountry, homeBaseAirport, icon, url, callSign, ranking;
 
     public String getName() {
         return name;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
     }
 
     public void setName(String name) {
@@ -38,14 +53,6 @@ public class Airline  implements Serializable {
 
     public void setHomeBaseAirport(String homeBaseAirport) {
         this.homeBaseAirport = homeBaseAirport;
-    }
-
-    public String getLogo() {
-        return logo;
-    }
-
-    public void setLogo(String logo) {
-        this.logo = logo;
     }
 
     public String getUrl() {
