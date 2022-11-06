@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -14,10 +15,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import java.util.Scanner;
 
-// fix this!
+
 
 public class SecondActivity extends AppCompatActivity{
 
@@ -26,8 +25,9 @@ public class SecondActivity extends AppCompatActivity{
     private Button proceedButton;
     TextView nameTitle;
     ImageView airlineLogo;
-    TextView textView2;
+    TextView detailsView;
     String description;
+
 
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
@@ -39,45 +39,44 @@ public class SecondActivity extends AppCompatActivity{
         Bundle b = getIntent().getExtras();
         Airline airline = (Airline) b.getSerializable("airline_name");
 
-        proceedButton =findViewById(R.id.proceedButton);
+        proceedButton =findViewById(R.id.readMoreButton);
         proceedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(SecondActivity.this, ThirdActivity.class);
-                intent.putExtra("airline_name", airline); // this needs to be fixed!
+                intent.putExtra("airline_name", airline);
                 startActivity(intent);
             }
         });
 
         nameTitle = findViewById(R.id.nameTitle);
         airlineLogo = findViewById(R.id.airlineLogo);
-        textView2 = findViewById(R.id.textView2);
+        detailsView = findViewById(R.id.detailsView);
 
+        String foundingYear = airline.getFoundDate().substring(airline.getFoundDate().length() -4);
+        int foundingYearInt = Integer.parseInt(foundingYear);
+        int yearsAgo = 2022 - foundingYearInt;
 
 
         String descriptionTemplate = getTextFromRes(R.raw.descriptiontemplate);
 
         description = descriptionTemplate.replace("%RANKING%",airline.getRanking());
+        description = description.replace("%FOUNDDATE%",airline.getFoundDate());
+        description = description.replace("%YEARS%", Integer.toString(yearsAgo));
+        description = description.replace("%ALLIANCE%",airline.getAlliance());
         description = description.replace("%CALLSIGN%", airline.getCallSign());
         description = description.replace("%ORIGIN%",airline.getOriginCountry());
         description = description.replace("%HOME%",airline.getHomeBaseAirport());
 
 
+
         nameTitle.setText(airline.getName());
-        textView2.setText(description);
+        detailsView.setText(description);
         proceedButton.setText("Read more on \n" + airline.getName());
         int id = SecondActivity.this.getResources().getIdentifier(airline.getIcon(), "drawable", SecondActivity.this.getPackageName());
         airlineLogo.setImageResource(id);
 
-    }
 
-    public String inputStreamToString(InputStream stream) {
-
-        Scanner inputScanner = new Scanner(stream, StandardCharsets.UTF_8.name()).useDelimiter("\\A");
-        String outString = inputScanner.hasNext() ? inputScanner.next() : "";
-        inputScanner.close();
-
-        return outString;
     }
 
 

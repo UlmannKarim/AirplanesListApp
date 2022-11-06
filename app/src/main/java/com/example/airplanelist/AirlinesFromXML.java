@@ -6,6 +6,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
 import java.io.InputStream;
+import java.net.MalformedURLException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -20,7 +21,7 @@ public class AirlinesFromXML {
     private Airline[] airlines;
     private Context context;
 
-    public AirlinesFromXML(Context context ){
+    public AirlinesFromXML(Context context ) throws MalformedURLException {
 
         this.context = context;
         // open a stream to the xml file + a DocBuilder + doc
@@ -40,7 +41,10 @@ public class AirlinesFromXML {
         }
 
             // name,  callSign,  logo,  originCountry,  homeBaseAirport,  url,  ranking
-
+//        this.ranking = ranking;
+//        this.foundDate = foundDate;
+//        this.alliance = alliance;
+//        this.wikiSubject = wikiSubject;
 
             //Slice xmlDoc to NodeList
         NodeList nameList = xmlDoc.getElementsByTagName("name");
@@ -50,6 +54,9 @@ public class AirlinesFromXML {
         NodeList homeBaseAirportList = xmlDoc.getElementsByTagName("homeBaseAirport");
         NodeList urlList = xmlDoc.getElementsByTagName("url");
         NodeList rankingList = xmlDoc.getElementsByTagName("ranking");
+        NodeList foundDateList = xmlDoc.getElementsByTagName("foundDate");
+        NodeList allianceList = xmlDoc.getElementsByTagName("alliance");
+        NodeList wikiSubjectList = xmlDoc.getElementsByTagName("wikiSubject");
 
         // make people
 
@@ -62,8 +69,14 @@ public class AirlinesFromXML {
             String homeBaseAirport = homeBaseAirportList.item(i).getFirstChild().getNodeValue();
             String url = urlList.item(i).getFirstChild().getNodeValue();
             String ranking = rankingList.item(i).getFirstChild().getNodeValue();
+            String foundDate = foundDateList.item(i).getFirstChild().getNodeValue();
+            String alliance = allianceList.item(i).getFirstChild().getNodeValue();
+            String wikiSubject = wikiSubjectList.item(i).getFirstChild().getNodeValue();
 
-            airlines[i] = new Airline(name, callSign, icon, originCountry, homeBaseAirport, url, ranking);
+
+
+            airlines[i] = new Airline(name, callSign, icon, originCountry, homeBaseAirport,
+                    url, ranking, foundDate, alliance, wikiSubject);
         }
     }
 

@@ -4,17 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ThirdActivity extends AppCompatActivity {
 
-    private Button nextButton;
+    private Button toWebButton;
+    String baseURL = "https://en.wikipedia.org/wiki/";
+    String fullURL;
 
-    // create and add the objects
-    TextView textView3, textView4, textView5;
+    TextView parsedDetailsView;
+    ImageView airlineLogo;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -22,30 +27,32 @@ public class ThirdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.third_activity);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        nextButton =findViewById(R.id.buttonLink);
+        toWebButton =findViewById(R.id.buttonLink);
 
         Bundle b = getIntent().getExtras();
         Airline airline = (Airline) b.getSerializable("airline_name");
 
-        nextButton.setOnClickListener(new View.OnClickListener() {
+        toWebButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(ThirdActivity.this, FourthActivity.class);
-                intent.putExtra("airline_name", (CharSequence) airline);
+                intent.putExtra("airline_name", airline);
                 startActivity(intent);
             }
         });
 
-        // add get home base airport
+        airlineLogo = findViewById(R.id.airlineLogo);
 
-        textView3 = findViewById(R.id.textView3);
-        textView3.setText(airline.getRanking());
+        parsedDetailsView = findViewById(R.id.parsedDetailsView);
+        fullURL = baseURL+=airline.getWikiSubject();
 
-        textView4 = findViewById(R.id.textView4);
-        textView4.setText(airline.getCallSign());
+        int id = ThirdActivity.this.getResources().getIdentifier(airline.getIcon(), "drawable", ThirdActivity.this.getPackageName());
+        airlineLogo.setImageResource(id);
 
-        textView5 = findViewById(R.id.textView5);
-        textView5.setText(airline.getOriginCountry());
+        new WikiParser(ThirdActivity.this,fullURL,parsedDetailsView).execute();
+
+
 
     }
+
 }

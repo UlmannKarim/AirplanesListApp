@@ -10,6 +10,10 @@
         <url>https://www.qatarairways.com/en-ie/homepage.html</url>
         <callSign>QATARI</callSign>
         <ranking>1</ranking>
+        <foundDate>22 November 1993</foundDate>
+        <alliance>Oneworld</alliance>
+        <wikiSubject>Qatar_Airways</wikiSubject>
+        <someInfo></someInfo>
     </airline>
 
     <airline>
@@ -20,6 +24,10 @@
         <url>https://www.singaporeair.com/en_UK/ie/home#/</url>
         <callSign>SINGAPORE</callSign>
         <ranking>2</ranking>
+        <foundDate>1 May 1947</foundDate>
+        <alliance>Star Alliance</alliance>
+        <wikiSubject>Singapore_Airlines</wikiSubject>
+        <someInfo></someInfo>
     </airline>
 
     <airline>
@@ -30,6 +38,10 @@
         <url>https://www.emirates.com/ie/english/</url>
         <callSign>Emirates</callSign>
         <ranking>3</ranking>
+        <foundDate>25 March 1985</foundDate>
+        <alliance>Independent</alliance>
+        <wikiSubject>Emirates_(airline)</wikiSubject>
+        <someInfo></someInfo>
     </airline>
 
     <airline>
@@ -40,6 +52,10 @@
         <url>https://www.ana.co.jp/</url>
         <callSign>ALL NIPPON/</callSign>
         <ranking>4</ranking>
+        <foundDate>	27 December 1952</foundDate>
+        <alliance>Star Alliance</alliance>
+        <wikiSubject>All_Nippon_Airways</wikiSubject>
+        <someInfo></someInfo>
     </airline>
 
     <airline>
@@ -50,6 +66,10 @@
         <url>https://www.qantas.com/ie/en.html</url>
         <callSign>QANTAS</callSign>
         <ranking>5</ranking>
+        <foundDate>16 November 1920</foundDate>
+        <alliance>Oneworld</alliance>
+        <wikiSubject>Qantas</wikiSubject>
+        <someInfo></someInfo>
     </airline>
 
     <airline>
@@ -60,6 +80,10 @@
         <url>https://www.jal.co.jp/jp/en/</url>
         <callSign>JAPAN AIR</callSign>
         <ranking>6</ranking>
+        <foundDate>	1 August 1951</foundDate>
+        <alliance>Oneworld</alliance>
+        <wikiSubject>Japan_Airlines</wikiSubject>
+        <someInfo></someInfo>
     </airline>
 
     <airline>
@@ -70,6 +94,10 @@
         <url>https://www.turkishairlines.com/</url>
         <callSign>TURKISH</callSign>
         <ranking>7</ranking>
+        <foundDate>20 May 1933</foundDate>
+        <alliance>Star Alliance</alliance>
+        <wikiSubject>Turkish_Airlines</wikiSubject>
+        <someInfo></someInfo>
     </airline>
 
     <airline>
@@ -80,6 +108,9 @@
         <url>https://wwws.airfrance.fr/splash</url>
         <callSign>AIRFRANS</callSign>
         <ranking>8</ranking>
+        <foundDate>7 October 1933</foundDate>
+        <alliance>SkyTeam</alliance>
+        <wikiSubject>Air_France</wikiSubject>
     </airline>
 
     <airline>
@@ -90,6 +121,10 @@
         <url>https://www.koreanair.com/ot/en</url>
         <callSign>KOREAN AIR</callSign>
         <ranking>9</ranking>
+        <foundDate>1 June 1962</foundDate>
+        <alliance>SkyTeam</alliance>
+        <wikiSubject>Korean_Air</wikiSubject>
+        <someInfo></someInfo>
     </airline>
 
     <airline>
@@ -100,5 +135,9 @@
         <url>https://www.swiss.com/ie/en/homepage</url>
         <callSign>SWISS</callSign>
         <ranking>10</ranking>
+        <foundDate>31 March 2002</foundDate>
+        <alliance>Star Alliance</alliance>
+        <wikiSubject>Swiss_International_Air_Lines</wikiSubject>
+        <someInfo></someInfo>
     </airline>
 </dataroot>

@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import java.net.MalformedURLException;
+
 
 public class MainActivity extends AppCompatActivity implements InterfaceRecycleView {
 //public class MainActivity extends AppCompatActivity {
@@ -28,7 +30,11 @@ public class MainActivity extends AppCompatActivity implements InterfaceRecycleV
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        airlines = new AirlinesFromXML(this);
+        try {
+            airlines = new AirlinesFromXML(this);
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
         // make adapter for it
         Airline[] airlinesList = airlines.getAirlines();
 

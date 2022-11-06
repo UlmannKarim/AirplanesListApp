@@ -1,4 +1,6 @@
 2022 Airline Ranking: %RANKING%
+Founded: %FOUNDDATE% (%YEARS% years ago)
+Alliance: %ALLIANCE%
 Call sign: %CALLSIGN%
 Country of origin: %ORIGIN%
 Home Airport: %HOME%

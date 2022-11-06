@@ -1,11 +1,13 @@
 package com.example.airplanelist;
 
 import java.io.Serializable;
+import java.net.MalformedURLException;
 
 public class Airline  implements Serializable {
 
     public Airline(String name, String callSign,
-                   String icon, String originCountry, String homeBaseAirport, String url, String ranking) {
+                   String icon, String originCountry, String homeBaseAirport, String url, String ranking,
+                   String foundDate, String alliance, String wikiSubject) throws MalformedURLException {
         this.name = name;
         this.callSign = callSign;
         this.icon = icon;
@@ -13,15 +15,12 @@ public class Airline  implements Serializable {
         this.homeBaseAirport = homeBaseAirport;
         this.url = url;
         this.ranking = ranking;
+        this.foundDate = foundDate;
+        this.alliance = alliance;
+        this.wikiSubject = wikiSubject;
+
     }
 
-
-    // have icon and logo attributes
-    // dispaly icon only
-    // when clicking on to the airline
-    // dispaly details and its full logo
-
-    private String name, originCountry, homeBaseAirport, icon, url, callSign, ranking;
 
     public String getName() {
         return name;
@@ -78,4 +77,42 @@ public class Airline  implements Serializable {
     public void setRanking(String ranking) {
         this.ranking = ranking;
     }
+
+    public String getFoundDate() {
+        return foundDate;
+    }
+
+    public String getAlliance() {
+        return alliance;
+    }
+
+    public void setAlliance(String alliance) {
+        this.alliance = alliance;
+    }
+
+    public void setFoundDate(String foundDate) {
+        this.foundDate = foundDate;
+    }
+
+//    public void setSomeInfo() throws MalformedURLException {
+//        WikiParser wikiParser = new WikiParser();
+//        this.someInfo = wikiParser.getInfo(this.wikiSubject);
+//    }
+
+    public String getSomeInfo() {
+        return someInfo;
+    }
+
+    private String name, originCountry, homeBaseAirport, icon, url, callSign, ranking, foundDate,
+            alliance, someInfo, wikiSubject;
+
+    public String getWikiSubject() {
+        return wikiSubject;
+    }
+
+    public void setWikiSubject(String wikiSubject) {
+        this.wikiSubject = wikiSubject;
+    }
+
+
 }
