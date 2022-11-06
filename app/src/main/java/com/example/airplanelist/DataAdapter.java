@@ -15,7 +15,6 @@ import android.util.Log;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
 
-    // ivar for DataAdapter
     private Context context;
     private int rowID;
     private Airline[] airlines;
@@ -30,7 +29,6 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // inflate the layout and make it a viewholder
         View v = LayoutInflater.from(this.context).inflate(this.rowID, parent, false);
 
         return new ViewHolder(v);
@@ -38,11 +36,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        // populate viewholder with model data
         holder.name.setText(airlines[position].getName());
-//        holder.rank.setText(airlines[position].getLogo());
 
-//        String airlineIcon = airlines[position].getIcon();
         Integer id = context.getResources().getIdentifier(airlines[position].getIcon(), "drawable", context.getPackageName());
         holder.icon.setImageResource(id);
         Log.d("Test image", id.toString());
@@ -58,8 +53,6 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
             }
         });
 
-
-        //holder.image.setImageResource(imageID);
     }
 
     @Override
@@ -73,32 +66,13 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
 
         public TextView name;
         public ImageView icon;
-        public TextView rank;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             this.name = itemView.findViewById(R.id.textView);
             this.icon = itemView.findViewById(R.id.imageView);
-            //this.rank = itemView.findViewById(R.id.textViewSubtitle);
 
-
-//            itemView.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    // call the InterfaceRecycleView method
-//                    if (recycleViewInterface != null){
-//                        int posistion = getAdapterPosition();
-//                        if(posistion != RecyclerView.NO_POSITION){
-//                            recycleViewInterface.onItemClick(posistion);
-//                        }
-//
-//                    }
-//                }
-//            });
         }
     }
 }
-
-// pull parser?
-// max ten

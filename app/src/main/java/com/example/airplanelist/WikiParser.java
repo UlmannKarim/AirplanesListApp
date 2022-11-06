@@ -23,7 +23,6 @@ public class WikiParser extends AsyncTask<Void, Void, Void> {
     Context context;
     TextView targetTextView;
 
-    //constructor
     protected WikiParser(Context context, String url, TextView targetTextView){
         link=url;
         this.context=context;
@@ -33,6 +32,7 @@ public class WikiParser extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
+        progress.setTitle("Fetching more info");
         progress.show();
     }
 
